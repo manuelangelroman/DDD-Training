@@ -69,4 +69,14 @@ public class UnitTest1
 
         Assert.NotNull(breedId);
     }
+
+
+    [Fact]
+    public void BreedId_should_not_be_valid()
+    {
+        var breedService = new FakeBreedService();
+        var id = Guid.NewGuid();
+
+        Assert.Throws<ArgumentException>(() => new BreedId(id,breedService));
+    }
 }
