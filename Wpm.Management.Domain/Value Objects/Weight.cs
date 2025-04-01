@@ -1,4 +1,4 @@
-﻿namespace Wpm.Management.Domain
+﻿namespace Wpm.Management.Domain.Value_Objects
 {
     public record Weight
     {

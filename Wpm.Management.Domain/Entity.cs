@@ -1,4 +1,6 @@
-﻿namespace Wpm.Management.Domain;
+﻿using Wpm.Management.Domain.Entities;
+
+namespace Wpm.Management.Domain;
 
 public abstract class Entity : IEquatable<Entity>
 {

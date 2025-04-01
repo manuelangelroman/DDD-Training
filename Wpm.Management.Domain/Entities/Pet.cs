@@ -1,4 +1,6 @@
-﻿namespace Wpm.Management.Domain;
+﻿using Wpm.Management.Domain.Value_Objects;
+
+namespace Wpm.Management.Domain.Entities;
 
 
 public class Pet : Entity
@@ -7,14 +9,17 @@ public class Pet : Entity
     public int Age { get; init; }
     public string Color { get; init; }
     public Weight Weight { get; init; }
-    public  SexOfPet SexOfPet { get; init; }
+    public SexOfPet SexOfPet { get; init; }
+
+    public BreedId BreedId { get; init; }
 
     public Pet(Guid id,
                string name,
                int age,
                string color,
                Weight weight,
-               SexOfPet sexOfPet)
+               SexOfPet sexOfPet,
+               BreedId breedId)
     {
         Id = id;
         Name = name;
@@ -22,6 +27,7 @@ public class Pet : Entity
         Color = color;
         Weight = weight;
         SexOfPet = sexOfPet;
+        BreedId = breedId;
     }
 
 }
